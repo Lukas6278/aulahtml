@@ -1,101 +1,89 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rosa - Eu Te Amo</title>
+<title>Pedido de Namoro</title>
 <style>
-    body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        background-color: #f7f7f7;
+  body {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    color: white;
+    font-family: Arial, sans-serif;
+  }
+  .heart {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100px;
+    height: 90px;
+    transform: translate(-50%, -50%);
+    animation: pulse 2s infinite;
+    cursor: pointer;
+  }
+  .heart:before,
+  .heart:after {
+    position: absolute;
+    content: "";
+    left: 50px;
+    top: 0;
+    width: 50px;
+    height: 80px;
+    background-color: purple;
+    border-radius: 50px 50px 0 0;
+    transform: rotate(-45deg);
+    transform-origin: 0 100%;
+  }
+  .heart:after {
+    left: 0;
+    transform: rotate(45deg);
+    transform-origin: 100% 100%;
+  }
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
     }
-
-    .rose-container {
-        position: relative;
-        width: 200px;
-        height: 200px;
+    50% {
+      transform: scale(1.2);
     }
-
-    .rose-petal {
-        position: absolute;
-        width: 0;
-        height: 0;
-        border-style: solid;
-        border-width: 20px 10px;
-        border-color: transparent transparent red;
-        border-radius: 50%;
-        transition: all 0.5s ease;
+    100% {
+      transform: scale(1);
     }
-
-    .rose-petal:nth-child(1) {
-        top: 100px;
-        left: 100px;
-        transform: rotate(0deg);
+  }
+  h1 {
+    font-size: 36px;
+    text-align: center;
+    animation: fadein 4s ease-out;
+  }
+  @keyframes fadein {
+    from {
+      opacity: 0;
     }
-
-    .rose-petal:nth-child(2) {
-        top: 100px;
-        left: 100px;
-        transform: rotate(45deg);
+    to {
+      opacity: 1;
     }
-
-    .rose-petal:nth-child(3) {
-        top: 100px;
-        left: 100px;
-        transform: rotate(90deg);
-    }
-
-    .rose-petal:nth-child(4) {
-        top: 100px;
-        left: 100px;
-        transform: rotate(135deg);
-    }
-
-    .rose-petal:nth-child(5) {
-        top: 100px;
-        left: 100px;
-        transform: rotate(180deg);
-    }
-
-    .message {
-        margin-top: 20px;
-        font-size: 20px;
-        text-align: center;
-        opacity: 0;
-        transition: opacity 1s ease;
-    }
-
-    .message.active {
-        opacity: 1;
-    }
+  }
 </style>
+<p>
+<script> 
+  function showMessage() {
+     alert('Hoje eu quero te dizer o quanto você é forte e o quanto eu tenho orgulho de você. Em meio aos desafios da vida, você enfrenta cada obstáculo com uma coragem e determinação que me inspiram todos os dias Você é uma guerreira, uma mulher incrível que não teme os desafios, mas os enfrenta de cabeça erguida, sempre com uma força interior que ilumina até os momentos mais sombrios Seu espírito resiliente é uma fonte constante de admiração para mim.
+Cada vez que vejo você superar dificuldades, cada conquista que você alcança, meu coração se enche de orgulho Você é uma prova viva de que a força interior e a determinação podem mover montanhas, e eu sinto uma imensa gratidão por ter você ao meu lado.
+Saiba que eu estarei sempre aqui para te apoiar, para celebrar suas vitórias e para te confortar nos momentos difíceis Você é minha rocha, meu porto seguro, e eu sou profundamente grato por ter você como minha parceira nesta jornada chamada vida.
+Eu te amo mais do que palavras podem expressar, e estou tão orgulhoso ');
+  }
+</script>
+</p>
 </head>
 <body>
-<div class="rose-container">
-    <div class="rose-petal"></div>
-    <div class="rose-petal"></div>
-    <div class="rose-petal"></div>
-    <div class="rose-petal"></div>
-    <div class="rose-petal"></div>
-</div>
-<div class="message">Eu te amo</div>
-
-<script>
-    // Simula a abertura da rosa
-    setTimeout(function() {
-        document.querySelectorAll('.rose-petal').forEach(function(petal, index) {
-            setTimeout(function() {
-                petal.style.borderWidth = '0 10px';
-            }, index * 100);
-        });
-        // Exibe a mensagem "Eu te amo" após 1 segundo
-        setTimeout(function() {
-            document.querySelector('.message').classList.add('active');
-        }, 1000);
-    }, 500);
-</script>
+  <div class="heart" onclick="showMessage()"></div>
+  <h1>voce é sem duvida o meu mozinho</h1>
+  <h1>a razao da minha vida o meu bb </h1>
+  <h1> sdd :( </h1>
 </body>
 </html>
